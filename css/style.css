@@ -429,10 +429,116 @@ a {
   gap: 0.85rem;
 }
 
+.cabinet {
+  width: min(100%, 500px);
+}
+
+.cabinet-shell {
+  position: relative;
+  padding: 16px;
+  border-radius: 28px;
+  perspective: 1400px;
+  background:
+    linear-gradient(180deg, rgba(214, 255, 74, 0.28), transparent 22%),
+    linear-gradient(165deg, #1e5340, #10281d 58%, #08140f);
+  box-shadow:
+    0 22px 48px rgba(0, 0, 0, 0.28),
+    inset 0 0 0 2px rgba(214, 255, 74, 0.32);
+}
+
+.cabinet-interior {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 18px;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 42%, rgba(214, 255, 74, 0.16), #07140f 70%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.cabinet-door {
+  position: absolute;
+  inset: 16px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(214, 255, 74, 0.5);
+  border-radius: 18px;
+  color: var(--cream);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 28%),
+    linear-gradient(155deg, #2a7354 0%, #164832 42%, #0d281c 100%);
+  box-shadow: inset 0 0 0 8px rgba(8, 22, 16, 0.28);
+  transform-origin: right center;
+  cursor: pointer;
+  animation: swing-open 1.15s 0.55s cubic-bezier(.55, .05, .25, 1) forwards;
+}
+
+.cabinet-door-copy,
+.cabinet-handle {
+  pointer-events: none;
+  animation: fade-door-copy 1.15s 0.55s linear forwards;
+}
+
+.js .cabinet-door-copy,
+.js .cabinet-handle {
+  animation: none;
+  transition: opacity 0.25s ease;
+}
+
+.js .cabinet.is-open .cabinet-door-copy,
+.js .cabinet.is-open .cabinet-handle {
+  opacity: 0;
+}
+
+.cabinet-door-copy {
+  display: grid;
+  gap: 0.35rem;
+  justify-items: center;
+}
+
+.cabinet-kicker {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lime);
+}
+
+.cabinet-brand {
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  letter-spacing: -0.04em;
+}
+
+.cabinet-handle {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  width: 12px;
+  height: 72px;
+  border-radius: 999px;
+  background: linear-gradient(#ffe7a8, #e39b2e);
+  transform: translateY(-50%);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+.js .cabinet-door {
+  animation: none;
+  transition: transform 1.05s cubic-bezier(.55, .05, .25, 1);
+}
+
+.js .cabinet.is-open .cabinet-door {
+  transform: rotateY(108deg);
+  pointer-events: none;
+}
+
 .wheel-wrap {
   position: relative;
-  width: min(100%, 540px);
-  aspect-ratio: 1;
+  width: 100%;
+  height: 100%;
 }
 
 .wheel-svg,
@@ -1102,6 +1208,16 @@ a {
   to { transform: rotate(360deg); }
 }
 
+@keyframes swing-open {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(108deg); }
+}
+
+@keyframes fade-door-copy {
+  0%, 60% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 @keyframes floaty {
   0%, 100% { translate: 0 0; }
   50% { translate: 0 18px; }
@@ -1192,5 +1308,10 @@ a {
 
   .ai-result .bar-fill {
     width: var(--target-width);
+  }
+
+  .cabinet-door,
+  .js .cabinet.is-open .cabinet-door {
+    transform: rotateY(108deg);
   }
 }

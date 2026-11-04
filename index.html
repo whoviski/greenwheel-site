@@ -7,7 +7,7 @@
   <meta name="description" content="GreenWheel — автономная роторная вертикальная ферма микрозелени с ИИ-мониторингом. Студенческий стартап ООО «АНСИТИФЕРМ» при поддержке Фонда содействия инновациям.">
   <meta name="theme-color" content="#0e3a2c">
   <meta property="og:title" content="GreenWheel — автономная роторная ферма микрозелени">
-  <meta property="og:description" content="Роторное колесо на 8 лотков, аэропоника и мониторинг на основе искусственного интеллекта. ООО «АНСИТИФЕРМ», программа «Студенческий стартап».">
+  <meta property="og:description" content="Роторное колесо на 8 лотков внутри шкафа с дверью, аэропоника и мониторинг на основе искусственного интеллекта. ООО «АНСИТИФЕРМ», программа «Студенческий стартап».">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -74,14 +74,18 @@
           </div>
           <ul class="pills reveal" style="--d: 340ms">
             <li>8 лотков</li>
+            <li>Шкаф с дверью</li>
             <li>Аэропоника</li>
             <li>ИИ-мониторинг</li>
           </ul>
         </div>
 
         <div class="hero-visual reveal" style="--d: 160ms">
+          <div class="cabinet" id="cabinet">
+            <div class="cabinet-shell">
+              <div class="cabinet-interior">
           <div class="wheel-wrap" id="wheel-wrap">
-            <svg class="wheel-svg" viewBox="0 0 200 200" role="img" aria-label="Роторное колесо с восемью лотками">
+            <svg class="wheel-svg" viewBox="0 0 200 200" role="img" aria-label="Роторное колесо с восемью лотками внутри шкафа с дверью">
               <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(214,255,74,0.35)" stroke-width="2"/>
               <circle cx="100" cy="100" r="46" fill="none" stroke="rgba(255,255,255,0.18)" stroke-dasharray="3 6"/>
               <g class="spin">
@@ -138,11 +142,23 @@
             <canvas id="wheel" width="640" height="640" aria-hidden="true"></canvas>
             <div class="wheel-tip" id="wheel-tip" hidden></div>
           </div>
+              </div>
+              <button class="cabinet-door" id="cabinet-door" type="button" aria-expanded="false" aria-controls="wheel-wrap">
+                <span class="cabinet-door-copy" aria-hidden="true">
+                  <span class="cabinet-kicker">Шкаф</span>
+                  <span class="cabinet-brand">GreenWheel</span>
+                </span>
+                <span class="cabinet-handle" aria-hidden="true"></span>
+                <span class="sr-only">Открыть дверцу шкафа</span>
+              </button>
+            </div>
+          </div>
           <div class="wheel-controls">
             <button class="btn btn-ghost btn-small" type="button" id="wheel-toggle" aria-pressed="false">Пауза</button>
+            <button class="btn btn-ghost btn-small" type="button" id="cabinet-toggle" aria-pressed="false">Открыть дверцу</button>
             <button class="btn btn-ghost btn-small" type="button" id="wheel-reset">Сбросить выбор</button>
           </div>
-          <p class="wheel-caption" id="wheel-status" aria-live="polite">Схема колеса с восемью лотками. Вращение — иллюстрация замысла, не снимок установки.</p>
+          <p class="wheel-caption" id="wheel-status" aria-live="polite">Колесо с восемью лотками стоит внутри шкафа с дверью. Дверь на схеме открывается. Вращение — иллюстрация замысла, не снимок установки.</p>
           <div class="tray-picker" role="group" aria-label="Лотки колеса">
             <button type="button" data-tray="0">Лоток 1</button>
             <button type="button" data-tray="1">Лоток 2</button>
@@ -162,7 +178,7 @@
         <div class="section-head reveal">
           <p class="kicker">01 — Концепция</p>
           <h2 id="concept-title">Как устроена ферма</h2>
-          <p class="section-lead">По замыслу проекта GreenWheel — вертикальная ферма на роторном колесе: аэропонный полив, привод и бортовой контур из контроллера, компьютера для нейросетей и сенсорного экрана.</p>
+          <p class="section-lead">По замыслу проекта GreenWheel — вертикальная ферма: роторное колесо с восемью лотками стоит внутри закрытого шкафа с дверью. Рядом — аэропонный полив, привод и бортовой контур из контроллера, компьютера для нейросетей и сенсорного экрана.</p>
         </div>
         <ul class="cards">
           <li class="card reveal" style="--d: 40ms">
@@ -170,7 +186,7 @@
               <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="16" r="2" fill="currentColor"/><path d="M16 5v4M16 23v4M5 16h4M23 16h4M8 8l2.5 2.5M21.5 21.5 24 24M24 8l-2.5 2.5M8 24l2.5-2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </span>
             <h3>Роторное колесо</h3>
-            <p>Восемь лотков для микрозелени размещены на вращающемся колесе.</p>
+            <p>Восемь лотков для микрозелени размещены на вращающемся колесе. Колесо находится внутри шкафа с дверью.</p>
           </li>
           <li class="card reveal" style="--d: 90ms">
             <span class="icon icon-teal" aria-hidden="true">

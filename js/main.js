@@ -115,6 +115,36 @@
     });
   });
 
+  const cabinet = document.getElementById("cabinet");
+  const doorButton = document.getElementById("cabinet-door");
+  const doorToggle = document.getElementById("cabinet-toggle");
+  const doorLabel = doorButton.querySelector(".sr-only");
+  let doorOpen = false;
+
+  function setDoor(open) {
+    doorOpen = open;
+    cabinet.classList.toggle("is-open", open);
+    doorButton.setAttribute("aria-expanded", String(open));
+    doorToggle.setAttribute("aria-pressed", String(open));
+    doorToggle.textContent = open ? "Закрыть дверцу" : "Открыть дверцу";
+    doorLabel.textContent = open ? "Закрыть дверцу шкафа" : "Открыть дверцу шкафа";
+  }
+
+  doorButton.addEventListener("click", function () {
+    setDoor(!doorOpen);
+  });
+
+  doorToggle.addEventListener("click", function () {
+    setDoor(!doorOpen);
+  });
+
+  cabinet.addEventListener("pointerenter", function () {
+    if (!doorOpen) setDoor(true);
+  });
+
+  if (reduced) setDoor(true);
+  else window.setTimeout(function () { setDoor(true); }, 700);
+
   const wrap = document.getElementById("wheel-wrap");
   const canvas = document.getElementById("wheel");
   const ctx = canvas.getContext("2d");
