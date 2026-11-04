@@ -284,14 +284,15 @@
         <div class="section-head reveal">
           <p class="kicker">03 — Искусственный интеллект</p>
           <h2 id="ai-title">Что уже измерено и что запланировано</h2>
-          <p class="section-lead">В календарном плане модели компьютерного зрения отмечены как «в работе». Ниже — единственный зафиксированный результат и три задачи, которые ещё только запланированы.</p>
+          <p class="section-lead">Измеренный результат относится к классификатору градиентного бустинга на scikit-learn. Нейросеть на TensorFlow ещё не обучена. Детекция, сегментация листьев и прогноз созревания запланированы. В календарном плане модели компьютерного зрения отмечены как «в работе».</p>
         </div>
         <div class="ai-grid">
           <article class="ai-result reveal">
-            <p class="kicker">Модель классификации</p>
+            <p class="kicker">Классификатор градиентного бустинга</p>
+            <p class="model-line">scikit-learn. Нейросеть на TensorFlow ещё не обучена, и цифра ниже к ней не относится.</p>
             <p class="accuracy" id="accuracy-value">0,818</p>
-            <p class="accuracy-note">Точность на тестовой выборке из <strong>110</strong> изображений. Целевой порог проекта — не ниже 70%.</p>
-            <div class="bar" role="img" aria-label="Точность 0,818 при целевом пороге не ниже 70 процентов. Шкала от 0 до 1.">
+            <p class="accuracy-note">Точность на тестовой выборке из <strong>22</strong> изображений: <strong>18</strong> верных ответов. Целевой порог проекта — не ниже 70%.</p>
+            <div class="bar" role="img" aria-label="Точность 0,818: 18 верных ответов из 22 изображений тестовой выборки. Целевой порог не ниже 70 процентов. Шкала от 0 до 1.">
               <div class="bar-track">
                 <div class="bar-fill" id="bar-fill" style="--target-width: 81.8%"></div>
                 <div class="bar-mark" style="left: 70%" title="Порог 70%"></div>
@@ -302,7 +303,17 @@
                 <span>1</span>
               </div>
             </div>
-            <p class="fine">Длина цветной полосы равна точности 0,818. Вертикальная отметка — порог 70% (0,70). На этой выборке порог пройден: 0,818 выше 0,70.</p>
+            <p class="fine">Длина цветной полосы равна точности 0,818 (18 из 22). Вертикальная отметка — порог 70% (0,70). На этой тестовой выборке порог пройден: 0,818 выше 0,70.</p>
+            <dl class="dataset-facts">
+              <div>
+                <dt>Набор</dt>
+                <dd>Microgreen Master Dataset, публичный набор Zenodo. Лицензия <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.ru">CC BY-NC 4.0</a>.</dd>
+              </div>
+              <div>
+                <dt>Состав</dt>
+                <dd>110 изображений: 52 здоровых, 52 с плесенью, 6 сухих. Тест — 22 изображения из этого набора.</dd>
+              </div>
+            </dl>
           </article>
           <div class="ai-planned">
             <article class="plan-card reveal" style="--d: 60ms">

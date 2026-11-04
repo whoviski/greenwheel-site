@@ -843,8 +843,45 @@ a {
   }
 }
 
+.model-line {
+  margin: -0.15rem 0 0.7rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
 .accuracy-note {
   font-size: 1.05rem;
+}
+
+.dataset-facts {
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.dataset-facts div {
+  margin: 0;
+}
+
+.dataset-facts dt {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--leaf);
+}
+
+.dataset-facts dd {
+  margin: 0.15rem 0 0;
+}
+
+.dataset-facts a {
+  color: #0e3a2c;
+  font-weight: 800;
+}
+
+.dataset-facts a:hover {
+  color: #1f8a4c;
 }
 
 .bar {
