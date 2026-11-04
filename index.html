@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GreenWheel — автономная роторная ферма микрозелени</title>
+  <meta name="description" content="GreenWheel — автономная роторная вертикальная ферма микрозелени с ИИ-мониторингом. Студенческий стартап ООО «АНСИТИФЕРМ» при поддержке Фонда содействия инновациям.">
+  <meta name="theme-color" content="#0e3a2c">
+  <meta property="og:title" content="GreenWheel — автономная роторная ферма микрозелени">
+  <meta property="og:description" content="Роторное колесо на 8 лотков, аэропоника и мониторинг на основе искусственного интеллекта. ООО «АНСИТИФЕРМ», программа «Студенческий стартап».">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#content">К содержанию</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-bar"></span></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Разделы страницы">
+      <a class="logo" href="#top">
+        <svg class="logo-mark" viewBox="0 0 36 36" aria-hidden="true">
+          <circle cx="18" cy="18" r="16" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <g class="logo-spin">
+            <circle cx="18" cy="4.5" r="2" fill="currentColor"/>
+            <circle cx="27.5" cy="8.5" r="2" fill="currentColor"/>
+            <circle cx="31.5" cy="18" r="2" fill="currentColor"/>
+            <circle cx="27.5" cy="27.5" r="2" fill="currentColor"/>
+            <circle cx="18" cy="31.5" r="2" fill="currentColor"/>
+            <circle cx="8.5" cy="27.5" r="2" fill="currentColor"/>
+            <circle cx="4.5" cy="18" r="2" fill="currentColor"/>
+            <circle cx="8.5" cy="8.5" r="2" fill="currentColor"/>
+          </g>
+          <circle cx="18" cy="18" r="3" fill="#ffc857"/>
+        </svg>
+        <span>GreenWheel</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="sr-only">Открыть меню</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <ul class="menu" id="site-menu">
+        <li><a href="#concept">Концепция</a></li>
+        <li><a href="#roadmap">Дорожная карта</a></li>
+        <li><a href="#ai">ИИ</a></li>
+        <li><a href="#goals">Цели</a></li>
+        <li><a href="#team">Команда</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+        <span class="blob blob-c"></span>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Студенческий стартап</p>
+          <h1 id="hero-title" class="reveal" style="--d: 60ms"><span class="gradient-text">GreenWheel</span></h1>
+          <p class="lead reveal" style="--d: 120ms">Автономная роторная вертикальная ферма микрозелени с мониторингом на основе искусственного интеллекта.</p>
+          <p class="byline reveal" style="--d: 180ms">Настапова Анастасия Денисовна · ООО «АНСИТИФЕРМ»</p>
+          <p class="support reveal" style="--d: 220ms">При поддержке Фонда содействия инновациям, программа «Студенческий стартап», договор <span class="contract">4494ГССС27/115876</span>.</p>
+          <div class="hero-actions reveal" style="--d: 280ms">
+            <a class="btn btn-primary" href="#concept">Смотреть концепцию</a>
+            <a class="btn btn-ghost" href="#roadmap">Календарный план</a>
+          </div>
+          <ul class="pills reveal" style="--d: 340ms">
+            <li>8 лотков</li>
+            <li>Аэропоника</li>
+            <li>ИИ-мониторинг</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" style="--d: 160ms">
+          <div class="wheel-wrap" id="wheel-wrap">
+            <svg class="wheel-svg" viewBox="0 0 200 200" role="img" aria-label="Роторное колесо с восемью лотками">
+              <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(214,255,74,0.35)" stroke-width="2"/>
+              <circle cx="100" cy="100" r="46" fill="none" stroke="rgba(255,255,255,0.18)" stroke-dasharray="3 6"/>
+              <g class="spin">
+                <g stroke="rgba(214,255,74,0.45)" stroke-width="1.4">
+                  <line x1="100" y1="100" x2="100" y2="36"/>
+                  <line x1="100" y1="100" x2="145" y2="55"/>
+                  <line x1="100" y1="100" x2="164" y2="100"/>
+                  <line x1="100" y1="100" x2="145" y2="145"/>
+                  <line x1="100" y1="100" x2="100" y2="164"/>
+                  <line x1="100" y1="100" x2="55" y2="145"/>
+                  <line x1="100" y1="100" x2="36" y2="100"/>
+                  <line x1="100" y1="100" x2="55" y2="55"/>
+                </g>
+                <g fill="#f4efe2" stroke="#245c40" stroke-width="1.2">
+                  <rect x="82" y="22" width="36" height="16" rx="4"/>
+                  <rect x="130" y="44" width="36" height="16" rx="4"/>
+                  <rect x="156" y="92" width="36" height="16" rx="4"/>
+                  <rect x="130" y="140" width="36" height="16" rx="4"/>
+                  <rect x="82" y="162" width="36" height="16" rx="4"/>
+                  <rect x="34" y="140" width="36" height="16" rx="4"/>
+                  <rect x="8" y="92" width="36" height="16" rx="4"/>
+                  <rect x="34" y="44" width="36" height="16" rx="4"/>
+                </g>
+                <g fill="#2f9e57">
+                  <ellipse cx="92" cy="27" rx="2.2" ry="4"/>
+                  <ellipse cx="100" cy="26" rx="2.2" ry="4.4"/>
+                  <ellipse cx="108" cy="27" rx="2.2" ry="3.6"/>
+                  <ellipse cx="140" cy="49" rx="2.2" ry="4"/>
+                  <ellipse cx="148" cy="48" rx="2.2" ry="4.4"/>
+                  <ellipse cx="156" cy="49" rx="2.2" ry="3.6"/>
+                  <ellipse cx="166" cy="97" rx="2.2" ry="4"/>
+                  <ellipse cx="174" cy="96" rx="2.2" ry="4.4"/>
+                  <ellipse cx="182" cy="97" rx="2.2" ry="3.6"/>
+                  <ellipse cx="140" cy="145" rx="2.2" ry="4"/>
+                  <ellipse cx="148" cy="144" rx="2.2" ry="4.4"/>
+                  <ellipse cx="156" cy="145" rx="2.2" ry="3.6"/>
+                  <ellipse cx="92" cy="167" rx="2.2" ry="4"/>
+                  <ellipse cx="100" cy="166" rx="2.2" ry="4.4"/>
+                  <ellipse cx="108" cy="167" rx="2.2" ry="3.6"/>
+                  <ellipse cx="44" cy="145" rx="2.2" ry="4"/>
+                  <ellipse cx="52" cy="144" rx="2.2" ry="4.4"/>
+                  <ellipse cx="60" cy="145" rx="2.2" ry="3.6"/>
+                  <ellipse cx="18" cy="97" rx="2.2" ry="4"/>
+                  <ellipse cx="26" cy="96" rx="2.2" ry="4.4"/>
+                  <ellipse cx="34" cy="97" rx="2.2" ry="3.6"/>
+                  <ellipse cx="44" cy="49" rx="2.2" ry="4"/>
+                  <ellipse cx="52" cy="48" rx="2.2" ry="4.4"/>
+                  <ellipse cx="60" cy="49" rx="2.2" ry="3.6"/>
+                </g>
+              </g>
+              <circle cx="100" cy="100" r="16" fill="#123728" stroke="#d6ff4a" stroke-width="2"/>
+              <text x="100" y="105" text-anchor="middle" fill="#d6ff4a" font-size="12" font-family="Manrope, sans-serif" font-weight="700">8</text>
+            </svg>
+            <canvas id="wheel" width="640" height="640" aria-hidden="true"></canvas>
+            <div class="wheel-tip" id="wheel-tip" hidden></div>
+          </div>
+          <div class="wheel-controls">
+            <button class="btn btn-ghost btn-small" type="button" id="wheel-toggle" aria-pressed="false">Пауза</button>
+            <button class="btn btn-ghost btn-small" type="button" id="wheel-reset">Сбросить выбор</button>
+          </div>
+          <p class="wheel-caption" id="wheel-status" aria-live="polite">Схема колеса с восемью лотками. Вращение — иллюстрация замысла, не снимок установки.</p>
+          <div class="tray-picker" role="group" aria-label="Лотки колеса">
+            <button type="button" data-tray="0">Лоток 1</button>
+            <button type="button" data-tray="1">Лоток 2</button>
+            <button type="button" data-tray="2">Лоток 3</button>
+            <button type="button" data-tray="3">Лоток 4</button>
+            <button type="button" data-tray="4">Лоток 5</button>
+            <button type="button" data-tray="5">Лоток 6</button>
+            <button type="button" data-tray="6">Лоток 7</button>
+            <button type="button" data-tray="7">Лоток 8</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-concept" id="concept" aria-labelledby="concept-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">01 — Концепция</p>
+          <h2 id="concept-title">Как устроена ферма</h2>
+          <p class="section-lead">По замыслу проекта GreenWheel — вертикальная ферма на роторном колесе: аэропонный полив, привод и бортовой контур из контроллера, компьютера для нейросетей и сенсорного экрана.</p>
+        </div>
+        <ul class="cards">
+          <li class="card reveal" style="--d: 40ms">
+            <span class="icon icon-lime" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="16" r="2" fill="currentColor"/><path d="M16 5v4M16 23v4M5 16h4M23 16h4M8 8l2.5 2.5M21.5 21.5 24 24M24 8l-2.5 2.5M8 24l2.5-2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Роторное колесо</h3>
+            <p>Восемь лотков для микрозелени размещены на вращающемся колесе.</p>
+          </li>
+          <li class="card reveal" style="--d: 90ms">
+            <span class="icon icon-teal" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M6 22c4-1 6-6 10-6s6 5 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 14c.5 2 1.5 3 2.5 3S12.5 16 13 14M15 12c.6 2.4 1.6 3.4 2.6 3.4S19.6 14.4 20.2 12M22 14c.5 2 1.5 3 2.5 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="9" r="1" fill="currentColor"/><circle cx="16" cy="7.5" r="1" fill="currentColor"/><circle cx="22" cy="9" r="1" fill="currentColor"/></svg>
+            </span>
+            <h3>Аэропоника</h3>
+            <p>Аэропонный контур построен на ультразвуковых мембранах.</p>
+          </li>
+          <li class="card reveal" style="--d: 140ms">
+            <span class="icon icon-amber" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><circle cx="12" cy="16" r="5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16.5 13.5h9M16.5 16h9M16.5 18.5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="25" cy="10" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="24" cy="23" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            </span>
+            <h3>Привод и датчики</h3>
+            <p>Шаговый двигатель, червячная передача и датчики Холла.</p>
+          </li>
+          <li class="card reveal" style="--d: 190ms">
+            <span class="icon icon-coral" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><rect x="6" y="8" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 20h4M18 14v6M22 16v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 8V6M20 8V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Arduino Uno</h3>
+            <p>На плату возложены управление в реальном времени и аварийная защита.</p>
+          </li>
+          <li class="card reveal" style="--d: 240ms">
+            <span class="icon icon-blue" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><rect x="7" y="7" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="12" y="12" width="8" height="8" rx="1.5" fill="currentColor" opacity="0.85"/><path d="M16 7V4M16 28v-3M7 16H4M28 16h-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Orange Pi 6 Plus</h3>
+            <p>Одноплатный компьютер с NPU предназначен для нейросетей.</p>
+          </li>
+          <li class="card reveal" style="--d: 290ms">
+            <span class="icon icon-rose" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><rect x="4" y="7" width="24" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 27h6M16 23v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="16" cy="15" r="2" fill="currentColor"/></svg>
+            </span>
+            <h3>Экран Waveshare</h3>
+            <p>Сенсорный экран диагональю 10,1″.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-roadmap" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">02 — Календарный план</p>
+          <h2 id="roadmap-title">Дорожная карта по КП</h2>
+          <p class="section-lead">Два этапа договора. Программное обеспечение и модели ИИ отмечены как «в работе». Остальные пункты второго этапа — «запланировано». Первый этап выполнен.</p>
+        </div>
+        <div class="filters reveal" role="group" aria-label="Фильтр пунктов по статусу">
+          <button type="button" class="is-active" data-filter="all" aria-pressed="true">Все</button>
+          <button type="button" data-filter="done" aria-pressed="false">Выполнено</button>
+          <button type="button" data-filter="active" aria-pressed="false">В работе</button>
+          <button type="button" data-filter="planned" aria-pressed="false">Запланировано</button>
+        </div>
+        <div class="timeline">
+          <article class="stage reveal" id="stage-1" data-status="done" style="--d: 40ms">
+            <header class="stage-head">
+              <p class="stage-index">Этап 1</p>
+              <p class="stage-dates">18.09.2026 – 17.10.2026</p>
+              <p class="badge badge-done">выполнено</p>
+            </header>
+            <h3>ТЗ и эскизная КД</h3>
+            <p>Техническое задание и эскизная конструкторская документация.</p>
+          </article>
+          <article class="stage reveal" id="stage-2" style="--d: 100ms">
+            <header class="stage-head">
+              <p class="stage-index">Этап 2</p>
+              <p class="stage-dates">18.10.2026 – 17.09.2027</p>
+            </header>
+            <ul class="tasks">
+              <li data-status="planned">
+                <span class="task-name">Механика</span>
+                <span class="badge badge-planned">запланировано</span>
+              </li>
+              <li data-status="planned">
+                <span class="task-name">Аэропоника</span>
+                <span class="badge badge-planned">запланировано</span>
+              </li>
+              <li data-status="planned">
+                <span class="task-name">Электроника</span>
+                <span class="badge badge-planned">запланировано</span>
+              </li>
+              <li data-status="active">
+                <span class="task-name">Модели компьютерного зрения</span>
+                <span class="badge badge-active"><i aria-hidden="true"></i>в работе</span>
+              </li>
+              <li data-status="active">
+                <span class="task-name">Программное обеспечение</span>
+                <span class="badge badge-active"><i aria-hidden="true"></i>в работе</span>
+              </li>
+              <li data-status="planned">
+                <span class="task-name">Интеграция</span>
+                <span class="badge badge-planned">запланировано</span>
+              </li>
+              <li data-status="planned">
+                <span class="task-name">Лабораторные испытания</span>
+                <span class="badge badge-planned">запланировано</span>
+              </li>
+              <li data-status="planned">
+                <span class="task-name">Полевые испытания</span>
+                <span class="badge badge-planned">запланировано</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <p class="filter-empty" id="filter-empty" hidden>Нет пунктов с выбранным статусом.</p>
+      </div>
+    </section>
+
+    <section class="section section-ai" id="ai" aria-labelledby="ai-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">03 — Искусственный интеллект</p>
+          <h2 id="ai-title">Что уже измерено и что запланировано</h2>
+          <p class="section-lead">В календарном плане модели компьютерного зрения отмечены как «в работе». Ниже — единственный зафиксированный результат и три задачи, которые ещё только запланированы.</p>
+        </div>
+        <div class="ai-grid">
+          <article class="ai-result reveal">
+            <p class="kicker">Модель классификации</p>
+            <p class="accuracy" id="accuracy-value">0,818</p>
+            <p class="accuracy-note">Точность на тестовой выборке из <strong>110</strong> изображений. Целевой порог проекта — не ниже 70%.</p>
+            <div class="bar" role="img" aria-label="Точность 0,818 при целевом пороге не ниже 70 процентов. Шкала от 0 до 1.">
+              <div class="bar-track">
+                <div class="bar-fill" id="bar-fill" style="--target-width: 81.8%"></div>
+                <div class="bar-mark" style="left: 70%" title="Порог 70%"></div>
+              </div>
+              <div class="bar-scale" aria-hidden="true">
+                <span>0</span>
+                <span class="bar-scale-target">0,70</span>
+                <span>1</span>
+              </div>
+            </div>
+            <p class="fine">Длина цветной полосы равна точности 0,818. Вертикальная отметка — порог 70% (0,70). На этой выборке порог пройден: 0,818 выше 0,70.</p>
+          </article>
+          <div class="ai-planned">
+            <article class="plan-card reveal" style="--d: 60ms">
+              <p class="badge badge-planned">запланировано</p>
+              <h3>Детекция</h3>
+              <p>Задача запланирована. Измеренного результата нет.</p>
+            </article>
+            <article class="plan-card reveal" style="--d: 120ms">
+              <p class="badge badge-planned">запланировано</p>
+              <h3>Сегментация листьев</h3>
+              <p>Задача запланирована. Измеренного результата нет.</p>
+            </article>
+            <article class="plan-card reveal" style="--d: 180ms">
+              <p class="badge badge-planned">запланировано</p>
+              <h3>Прогноз созревания</h3>
+              <p>Задача запланирована. Целевая погрешность — ±2 дня, это ориентир, а не достигнутая точность.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-goals" id="goals" aria-labelledby="goals-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">04 — Ориентиры</p>
+          <h2 id="goals-title">Цели, не результаты</h2>
+          <p class="section-lead goal-disclaimer">Показатели в этом блоке — цели проекта. Это не измеренные итоги работы установки и не данные эксплуатации.</p>
+        </div>
+        <div class="goal-grid">
+          <article class="goal-card reveal">
+            <p class="stamp">Цель</p>
+            <h3>Вода</h3>
+            <p class="goal-figure">до 70%</p>
+            <p>Снижение расхода воды на величину до 70%.</p>
+          </article>
+          <article class="goal-card reveal" style="--d: 80ms">
+            <p class="stamp">Цель</p>
+            <h3>Автономность</h3>
+            <p class="goal-figure">автономная работа</p>
+            <p>Автономная работа установки.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-team" id="team" aria-labelledby="team-title">
+      <div class="container team-layout">
+        <div class="reveal">
+          <p class="kicker">05 — Команда и контакты</p>
+          <h2 id="team-title">Организация проекта</h2>
+        </div>
+        <p class="company reveal" style="--d: 80ms">ООО «АНСИТИФЕРМ»</p>
+        <p class="support-team reveal" style="--d: 140ms">Фонд содействия инновациям · программа «Студенческий стартап» · договор <span class="contract">4494ГССС27/115876</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p class="footer-brand">GreenWheel</p>
+      <p>ООО «АНСИТИФЕРМ»</p>
+      <p>Фонд содействия инновациям, программа «Студенческий стартап»</p>
+      <a href="#top">Наверх</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
