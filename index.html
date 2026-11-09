@@ -11,9 +11,6 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -392,11 +389,17 @@
     <div class="container footer-grid">
       <p class="footer-brand">GreenWheel</p>
       <p>ООО «АНСИТИФЕРМ»</p>
-      <p>Фонд содействия инновациям, программа «Студенческий стартап»</p>
+      <nav class="footer-legal" aria-label="Правовые документы">
+        <a href="privacy.html">Политика конфиденциальности</a>
+        <a href="terms.html">Условия использования</a>
+        <a href="cookies.html">Политика cookie</a>
+        <button type="button" class="cookie-settings">Настройки cookie</button>
+      </nav>
       <a href="#top">Наверх</a>
     </div>
   </footer>
 
+  <script src="js/consent.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
