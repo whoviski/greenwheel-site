@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Политика cookie — GreenWheel</title>
+  <meta name="description" content="Какие cookie и ключи localStorage ставит сайт GreenWheel.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="legal-page">
+  <a class="skip-link" href="#content">К содержанию</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Документы">
+      <a class="logo" href="index.html"><span>GreenWheel</span></a>
+      <ul class="menu legal-menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="privacy.html">Конфиденциальность</a></li>
+        <li><a href="terms.html">Условия</a></li>
+        <li><a href="cookies.html" aria-current="page">Cookie</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="content" class="legal-doc">
+    <h1>Политика использования файлов cookie</h1>
+    <p class="edition">Редакция от 9 ноября 2026 г.</p>
+    <p>Ниже перечислено только то, что код сайта GreenWheel действительно записывает. Оператор — ООО «АНСИТИФЕРМ», ОГРН 1261600034926, ИНН 1658258339, КПП 165801001, адрес: 420044, Республика Татарстан, г. о. город Казань, г. Казань, ул. Восстания, д. 32, кв. 58.</p>
+
+    <h2>1. Что проверялось</h2>
+    <p>В коде нет вызовов <code>document.cookie</code> и нет обращений к <code>sessionStorage</code>. Единственная запись — ключ в <code>localStorage</code>, который создаёт баннер согласия.</p>
+
+    <h2>2. Записи</h2>
+    <div class="legal-table-wrap">
+      <table class="legal-table">
+        <thead>
+          <tr>
+            <th>Ключ</th>
+            <th>Где</th>
+            <th>Назначение</th>
+            <th>Тип</th>
+            <th>Срок</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>gw-cookie-consent</code></td>
+            <td>localStorage этого сайта</td>
+            <td>Хранит выбор кнопок баннера: необходимые, аналитические и маркетинговые флаги и время сохранения. На сервер оператора не отправляется.</td>
+            <td>Строго необходимые</td>
+            <td>365 суток с момента сохранения. Затем баннер показывается снова. Удаляется очисткой данных сайта в браузере.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>HTTP-cookie: нет. sessionStorage: нет. Аналитические и маркетинговые cookie: нет, соответствующие скрипты в коде не подключаются.</p>
+
+    <h2>3. Баннер</h2>
+    <p>При первом заходе и после истечения 365 суток показывается баннер с кнопками «Принять все», «Только необходимые» и «Настроить». Пока выбор не сохранён, необязательные скрипты не загружаются. Сейчас таких скриптов нет, поэтому обе кнопки согласия отличаются только сохранёнными флагами и не включают внешние сервисы.</p>
+    <p>В панели «Настроить» необходимые данные нельзя снять: без этой записи баннер нельзя запомнить. Пункты аналитики и маркетинга можно отметить, но код при этом ничего дополнительно не загружает. Это прямо написано рядом с пунктами.</p>
+    <p>Повторно открыть выбор можно кнопкой «Настройки cookie» внизу любой страницы. Если выбор уже сохранён, баннер закрывается клавишей Escape. До первого выбора Escape выбор не подставляет.</p>
+
+    <h2>4. Запросы</h2>
+    <p>Вопросы направляйте по адресу оператора из начала страницы или на [укажите e-mail для обращений]. См. <a href="privacy.html">политику конфиденциальности</a>.</p>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p class="footer-brand">GreenWheel</p>
+      <p>ООО «АНСИТИФЕРМ»</p>
+      <nav class="footer-legal" aria-label="Правовые документы">
+        <a href="privacy.html">Политика конфиденциальности</a>
+        <a href="terms.html">Условия использования</a>
+        <a href="cookies.html">Политика cookie</a>
+        <button type="button" class="cookie-settings">Настройки cookie</button>
+      </nav>
+      <a href="index.html">На главную</a>
+    </div>
+  </footer>
+  <script src="js/consent.js"></script>
+</body>
+</html>
