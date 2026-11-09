@@ -229,7 +229,7 @@
         <div class="section-head reveal">
           <p class="kicker">02 — Календарный план</p>
           <h2 id="roadmap-title">Дорожная карта по КП</h2>
-          <p class="section-lead">Два этапа договора. Программное обеспечение и модели ИИ отмечены как «в работе». Остальные пункты второго этапа — «запланировано». Первый этап выполнен.</p>
+          <p class="section-lead">Этап 1 выполнен. На этапе 2 программное обеспечение — «в работе». Классификатор — «выполнено», остальные задачи ИИ — «запланировано». Механика, аэропоника, электроника, интеграция и испытания — «запланировано».</p>
         </div>
         <div class="filters reveal" role="group" aria-label="Фильтр пунктов по статусу">
           <button type="button" class="is-active" data-filter="all" aria-pressed="true">Все</button>
@@ -265,9 +265,13 @@
                 <span class="task-name">Электроника</span>
                 <span class="badge badge-planned">запланировано</span>
               </li>
-              <li data-status="active">
-                <span class="task-name">Модели компьютерного зрения</span>
-                <span class="badge badge-active"><i aria-hidden="true"></i>в работе</span>
+              <li data-status="done">
+                <span class="task-name">Классификатор</span>
+                <span class="badge badge-done">выполнено</span>
+              </li>
+              <li data-status="planned">
+                <span class="task-name">Детекция, сегментация листьев и прогноз созревания</span>
+                <span class="badge badge-planned">запланировано</span>
               </li>
               <li data-status="active">
                 <span class="task-name">Программное обеспечение</span>
@@ -297,17 +301,17 @@
         <div class="section-head reveal">
           <p class="kicker">03 — Искусственный интеллект</p>
           <h2 id="ai-title">Что уже измерено и что запланировано</h2>
-          <p class="section-lead">Измеренный результат относится к классификатору градиентного бустинга на scikit-learn. Нейросеть на TensorFlow ещё не обучена. Детекция, сегментация листьев и прогноз созревания запланированы. В календарном плане модели компьютерного зрения отмечены как «в работе».</p>
+          <p class="section-lead">На фиксированной тестовой выборке из 22 изображений и классификатор, и нейросеть дают 21 верный ответ: точность 0,955. По умолчанию работает классификатор. Нейросеть включается в настройках и при сбое уступает ему. Детекция, сегментация листьев и прогноз созревания запланированы. Порог не ниже 70% на этой выборке пройден.</p>
         </div>
         <div class="ai-grid">
           <article class="ai-result reveal">
-            <p class="kicker">Классификатор градиентного бустинга</p>
-            <p class="model-line">scikit-learn. Нейросеть на TensorFlow ещё не обучена, и цифра ниже к ней не относится.</p>
-            <p class="accuracy" id="accuracy-value">0,818</p>
-            <p class="accuracy-note">Точность на тестовой выборке из <strong>22</strong> изображений: <strong>18</strong> верных ответов. Целевой порог проекта — не ниже 70%.</p>
-            <div class="bar" role="img" aria-label="Точность 0,818: 18 верных ответов из 22 изображений тестовой выборки. Целевой порог не ниже 70 процентов. Шкала от 0 до 1.">
+            <p class="kicker">Две модели классификации</p>
+            <p class="model-line">По умолчанию — градиентный бустинг, scikit-learn. В настройках — нейросеть MobileNetV2 (α = 0,35), TensorFlow/Keras, transfer learning. Файл TFLite int8, 0,65 МБ, подготовлен для Orange Pi 6 Plus. Если нейросеть недоступна, остаётся классификатор.</p>
+            <p class="accuracy" id="accuracy-value">0,955</p>
+            <p class="accuracy-note">Фиксированный тест: <strong>22</strong> изображения, <strong>21</strong> верный ответ. Точность 0,955 у обеих моделей. 95-процентный интервал: 0,78–0,99. Целевой порог проекта — не ниже 70%.</p>
+            <div class="bar" role="img" aria-label="Точность 0,955: 21 верный ответ из 22 изображений. 95-процентный интервал от 0,78 до 0,99. Целевой порог не ниже 70 процентов.">
               <div class="bar-track">
-                <div class="bar-fill" id="bar-fill" style="--target-width: 81.8%"></div>
+                <div class="bar-fill" id="bar-fill" style="--target-width: 95.5%"></div>
                 <div class="bar-mark" style="left: 70%" title="Порог 70%"></div>
               </div>
               <div class="bar-scale" aria-hidden="true">
@@ -316,15 +320,15 @@
                 <span>1</span>
               </div>
             </div>
-            <p class="fine">Длина цветной полосы равна точности 0,818 (18 из 22). Вертикальная отметка — порог 70% (0,70). На этой тестовой выборке порог пройден: 0,818 выше 0,70.</p>
+            <p class="fine">Длина цветной полосы равна точности 0,955 (21 из 22). Вертикальная отметка — порог 70% (0,70). 0,955 выше 0,70.</p>
             <dl class="dataset-facts">
               <div>
                 <dt>Набор</dt>
-                <dd>Microgreen Master Dataset, публичный набор Zenodo. Лицензия <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.ru">CC BY-NC 4.0</a>.</dd>
+                <dd>Набор небольшой: Microgreen Master Dataset, Zenodo. Лицензия <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.ru">CC BY-NC 4.0</a>. Исходных фотографий сухих ростков — 2.</dd>
               </div>
               <div>
-                <dt>Состав</dt>
-                <dd>110 изображений: 52 здоровых, 52 с плесенью, 6 сухих. Тест — 22 изображения из этого набора.</dd>
+                <dt>Оговорка</dt>
+                <dd>Это точность на тестовой выборке, а не полевая точность.</dd>
               </div>
             </dl>
           </article>
