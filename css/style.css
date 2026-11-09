@@ -1326,8 +1326,7 @@ a {
     width: var(--target-width);
   }
 
-  .cabinet-door,
-  .js .cabinet.is-open .cabinet-door {
+  html:not(.js) .cabinet-door {
     transform: rotateY(108deg);
   }
 }
